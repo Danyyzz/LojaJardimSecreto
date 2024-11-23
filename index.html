@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Loja jardim</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header>
+
+        <div class="cabecalho__superior">
+            <p>Jardim Secreto</p>
+
+            <div class="cabecalho__pesquisar">
+                <form class="cabecalho__pesquisar__form">
+                  <input type="text" placeholder="Pesquise aqui..." class="cabecalho__pesquisar__texto">
+                  <button type="submit" class="cabecalho__pesquisar__botao">
+                    <img src="./templates/iconLupa.png" alt="imagem Lupa">
+                  </button>
+                </form>
+              </div>
+
+            <nav>
+                <ul class="cabecalho__links">
+
+                    <li><a class="links__active" href="#home" >Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+
+                    <li  class="dropdown">
+
+                        <a href="#" class="dropdown-toggle">Conta</a>
+                        <ul class="cabecalho__dropmenu">
+                        <li><a href="#design">Design</a></li>
+                        <li><a href="#dev">Desenvolvimento</a></li>
+                        <li><a href="#marketing">Sua Conta</a></li>
+                        </ul>
+
+                    </li>
+
+                    <li><a href="#contato">Carrinho</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <div class="cabecalho__inferior">
+
+        </div>
+
+    </header>
+
+    <main>
+        <div class="parallax">
+            <div class="parallax__imagem" id="imagem1"></div>
+          </div>
+          <div class="parallax__texto">
+            <h1>Bem-vindo ao Efeito Parallax</h1>
+            <p>Agora a segunda imagem aparece ao descer!</p>
+          </div>
+          <div class="parallax">
+            <div class="parallax__imagem" id="imagem2"></div>
+          </div>
+    </main>
+
+    <footer></footer>
+    
+
+    <script src="./javascript/javascript.js"></script>
+</body>
+</html>
