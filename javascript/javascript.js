@@ -5,7 +5,7 @@ document.addEventListener("scroll", () => {
     const imagem2 = document.getElementById("imagem2");
   
     imagem1.style.transform = `translateY(${scrollPosition * 0.3}px)`;
-    imagem2.style.transform = `translateY(${(scrollPosition - window.innerHeight) * 0.5}px)`;
+    imagem2.style.transform = `translateY(${(scrollPosition - window.innerHeight) * 0.3}px)`;
   });
 
 

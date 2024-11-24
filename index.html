@@ -9,8 +9,10 @@
 <body>
     <header>
 
+    <div class="cabecalho">
+
         <div class="cabecalho__superior">
-            <p>Jardim Secreto</p>
+            <img class="cabecalho__superior__logo" src="./templates/iconLogo.png" alt="logo Jardim Secreto">
 
             <div class="cabecalho__pesquisar">
                 <form class="cabecalho__pesquisar__form">
@@ -24,21 +26,25 @@
             <nav>
                 <ul class="cabecalho__links">
 
-                    <li><a class="links__active" href="#home" >Home</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a class="links__active" href="#home" style="color: white;">Loja Oficial</a></li>
+
+                    <li><a href="#sobre">Favoritos</a></li>
+
+                    <li><a href="#contato">Carrinho</a></li>
 
                     <li  class="dropdown">
 
                         <a href="#" class="dropdown-toggle">Conta</a>
                         <ul class="cabecalho__dropmenu">
-                        <li><a href="#design">Design</a></li>
-                        <li><a href="#dev">Desenvolvimento</a></li>
-                        <li><a href="#marketing">Sua Conta</a></li>
+                        <li><a href="#design">Meus Pedidos</a></li>
+                        <li><a href="#dev">Meus Dados</a></li>
+                        <li><a href="#dev">Histórico</a></li>
+                        <li><a href="#marketing">Configurações</a></li>
+                        <li><a href="#dev">Atendimento</a></li>
                         </ul>
 
                     </li>
 
-                    <li><a href="#contato">Carrinho</a></li>
 
                 </ul>
             </nav>
@@ -46,18 +52,50 @@
 
         <div class="cabecalho__inferior">
 
+          <ul class="cabecalho__inferior__links">
+            <li><a href="#home"">Lançamento</a></li>
+
+            <li><a href="#sobre">Promoções</a></li>
+
+            <li><a href="#contato">Perfumaria</a></li>
+
+            <li><a href="#contato">Maquiagem</a></li>
+
+            <li><a href="#contato">Skincare</a></li>
+
+            <li><a href="#contato">Corpo e Banho</a></li>
+
+            <li><a href="#contato">Infantil</a></li>
+
+            <li><a href="#contato">Masculino</a></li>
+
+            <li><a href="#contato">Pets</a></li>
+
+            <li><a href="#contato">Linhas</a></li>
+          </ul>
+
         </div>
+
+    </div>
 
     </header>
 
     <main>
         <div class="parallax">
-            <div class="parallax__imagem" id="imagem1"></div>
+            <div class="parallax__imagem" id="imagem1">
+              <div class="parallax__imagem__texto">
+                <p>Seja Bem-Vindo ao</p>
+                <h1>Jardim Secreto</h1>
+                <p>Revelando a Beleza que Floresce em Você</p>
+              </div>
+            </div>
           </div>
-          <div class="parallax__texto">
-            <h1>Bem-vindo ao Efeito Parallax</h1>
-            <p>Agora a segunda imagem aparece ao descer!</p>
+
+          <div class="parallax__meio">
+                <h1>Descubra a Magia do Jardim Secreto!</h1>
+                <p>Entre em um mundo onde beleza e natureza se encontram! No Jardim Secreto, você encontrará cosméticos cuidadosamente selecionados para cuidar de você com todo o carinho que merece.</p>
           </div>
+
           <div class="parallax">
             <div class="parallax__imagem" id="imagem2"></div>
           </div>
