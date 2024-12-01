@@ -66,30 +66,28 @@ header{
     flex: 1;
     font-size: 15px;
     border: 1.5px solid var(--cor-primaria);
-    padding: 9px 5px 9px 5px;
+    padding: 8px 5px 8px 5px;
+    font-family: var(--fonte-primaria);
+    font-weight:  500;
     border-radius: 20px 0px 0px 20px;
   }
     
-  .cabecalho__pesquisar__botao {
-    background-color: var(--cor-base-primaria);
-    cursor: pointer;
-    display: flex;
-    transition: background-color 0.3s ease;
-    border: none;
-  }
-
-  .cabecalho__pesquisar__botao > img{
-    width: 30%;
-    background-color: var(--cor-primaria);
-    border: 1.5px solid var(--cor-primaria);
+.cabecalho__pesquisar__botao {
+    font-size: 15px;
+    padding: 8px 5px 8px 5px;
+    font-family: var(--fonte-primaria);
+    font-weight:  500;
     border-radius: 0px 20px 20px 0px;
-    padding: 1px;
-    padding-left: 10px;
-  }
-  
-  .cabecalho__pesquisar__botao > img:hover {
-    background-color: var(--cor-secundaria);
-  }
+    border: 1.5px solid var(--cor-primaria);
+    background-color: var(--cor-primaria);
+    color: var(--cor-base-primaria);
+    transition: 0.5s;
+}
+
+.cabecalho__pesquisar__botao:hover {
+  background-color: var(--cor-secundaria);
+  transition: 0.5s;
+}
 
 .cabecalho__links {
     list-style: none;
@@ -102,28 +100,28 @@ header{
 
 .cabecalho__links li {
     position: relative;
-  }
+}
   
-  .cabecalho__links a {
+.cabecalho__links a {
     text-decoration: none;
     color: var(--cor-base-secundaria);
     font-size: 16px;
     transition: color 0.3s ease;
     font-family: var(--fonte-primaria);
     font-weight: 500;
-  }
+}
   
-  .cabecalho__links a:hover {
+.cabecalho__links a:hover {
     color: var(--cor-base-primaria);
-  }
+}
 
-  .links__active{
+.links__active{
     background-color: var(--cor-secundaria); 
     padding: 5px 10px;
     border-radius: 20px;
-  }
+}
   
-  .cabecalho__dropmenu {
+.cabecalho__dropmenu {
     display: none;
     position: absolute;
     top: 100%;
@@ -135,36 +133,36 @@ header{
     padding: 10px 0;
     min-width: 150px;
     z-index: 10;
-  }
+}
   
-  .cabecalho__dropmenu li {
+.cabecalho__dropmenu li {
     padding: 10px 20px;
-  }
+}
   
-  .cabecalho__dropmenu li a {
+.cabecalho__dropmenu li a {
     color: #333;
     font-size: 14px;
-  }
+}
   
-  .cabecalho__dropmenu li a:hover {
-    color: var(--cor-quartenaria);
+.cabecalho__dropmenu li a:hover {
+    color: var(--cor-secundaria);
     background-color: var(--cor-base-primaria);
-  }
+}
   
-  .dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu {
     display: block;
-  }
+}
   
-  .cabecalho__dropmenu {
+.cabecalho__dropmenu {
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
-  }
+}
   
-  .dropdown:hover .cabecalho__dropmenu {
+.dropdown:hover .cabecalho__dropmenu {
     opacity: 1;
     transform: translateY(0);
-  }
+}
 
 .cabecalho__inferior{
     display: flex;
@@ -203,13 +201,18 @@ header{
 
 
   /*main*/
-  .parallax {
+
+.parallax__apresentacao{
+  border-radius: 0px 0px -20px -20px;
+}
+
+.parallax {
     position: relative;
     height: 100vh;
     overflow: hidden;
-  }
+}
   
-  .parallax__imagem {
+.parallax__imagem {
     position: absolute;
     top: 0;
     left: 0;
@@ -217,14 +220,14 @@ header{
     height: 100%;
     background-size: cover;
     background-position: center;
-  }
+}
   
-  #imagem1 {
+#imagem1 {
     background-image: url(../templates/parallax1.png);
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
 .parallax__imagem__texto{
   display: flex;
@@ -237,11 +240,14 @@ header{
   padding: 60px 30px;
   background-color: #ffffff36;
   box-shadow: 0 5px 15px #00000028;
+  width: 40%;
+  text-align: center;
 }
 
 .parallax__imagem__texto > p{
   font-family: var(--fonte-primaria);
   font-size: 20px;
+  font-weight: 500;
 }
 
 .parallax__imagem__texto > h1{
@@ -253,13 +259,37 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--cor-base-primaria);
-  color: #333;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(255,176,176,1) 100%);  color: #333;
   padding: 50px 20px;
 }
   
-  #imagem2 {
+#imagem2 {
     background-image: url(../templates/parallax2.png);
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   
+
+.carousel {
+  width: 80%;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.carousel-images {
+  display: flex;
+  width: 300%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  object-fit: cover;
+}
+
   /*Footer*/

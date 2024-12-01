@@ -16,3 +16,20 @@ document.addEventListener("scroll", () => {
       menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     });
   });
+
+  
+let currentIndex = 0;
+
+function showNextImage() {
+  const imagesContainer = document.querySelector('.carousel-images');
+  const totalImages = imagesContainer.children.length;
+
+  // Calcula o índice da próxima imagem
+  currentIndex = (currentIndex + 1) % totalImages;
+
+  // Move as imagens
+  imagesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Troca de imagem a cada 3 segundos
+setInterval(showNextImage, 3000);
