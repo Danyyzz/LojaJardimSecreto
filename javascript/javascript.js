@@ -9,27 +9,20 @@ document.addEventListener("scroll", () => {
   });
 
 
-  document.querySelectorAll('.dropdown-toggle').forEach((dropdown) => {
-    dropdown.addEventListener('click', (e) => {
-      e.preventDefault();
-      const menu = dropdown.nextElementSibling;
-      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    });
+  document.querySelector('.menu__conta').addEventListener('mouseover', () => {
+    const dropmenu = document.querySelector('.dropmenu');
+    dropmenu.style.display = 'block';
+  });
+  
+  document.querySelector('.menu__conta').addEventListener('mouseleave', () => {
+    const dropmenu = document.querySelector('.dropmenu');
+    dropmenu.style.display = 'none';
+  });
+  
+  // Garantir que o submenu desapareça ao mover o mouse para fora
+  document.querySelector('.dropmenu').addEventListener('mouseleave', () => {
+    const dropmenu = document.querySelector('.dropmenu');
+    dropmenu.style.display = 'none';
   });
 
-  
-let currentIndex = 0;
 
-function showNextImage() {
-  const imagesContainer = document.querySelector('.carousel-images');
-  const totalImages = imagesContainer.children.length;
-
-  // Calcula o índice da próxima imagem
-  currentIndex = (currentIndex + 1) % totalImages;
-
-  // Move as imagens
-  imagesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-// Troca de imagem a cada 3 segundos
-setInterval(showNextImage, 3000);
